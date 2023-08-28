@@ -1,0 +1,129 @@
+@import '../../styles/mediaqueries';
+
+.card {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    margin-bottom: 70px;
+    justify-content: space-between;
+    height: 80vh;
+
+    @include MQ ($tablet) {
+      margin-bottom: 80px;
+      gap: 50px;
+    }
+
+    @include MQ ($desktop) {
+      height: 70vh;
+      margin: 100px auto;
+      gap: 30px;
+      justify-content: center;
+    }
+}
+
+.card__image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    height: 90%;
+    scroll-snap-type: y mandatory;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    @include MQ ($tablet) {
+      height: 100%;
+    }
+
+    @include MQ ($desktop) {
+      margin: 0;
+    }
+
+    img {
+      border: solid 1px black;
+      max-width: 100%;
+      min-width: 70%;
+      height: 100%;
+      scroll-snap-align: start;
+    }
+}
+
+.card__image::-webkit-scrollbar {
+  display: none;
+}
+
+.card__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 20px;
+}
+
+    .card__link p {
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        margin: 0;
+
+        @include MQ ($tablet) {
+          font-size: 2.6rem;
+        }
+
+        @include MQ ($desktop) {
+          font-size: 2.2rem;
+        }
+    }
+
+    .card__link img {
+        width: 10px;
+        animation: arrowAnimation 1.5s infinite;
+
+        @include MQ ($tablet) {
+          width: 15px;
+        }
+    }
+    
+    @keyframes arrowAnimation {
+      0% {
+        transform: translateY(10px);
+      }
+      50% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(10px);
+      }
+    }
+
+.card__dots {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 90%;
+  gap: 10px;
+  width: 10px;
+
+  @include MQ ($tablet) {
+    height: 100%;
+  }
+}
+      
+      .card__dot {
+        width: 2px;
+        height: 33%;
+        background-color: #000;
+        opacity: 0.3;
+        transition: opacity 0.3s;
+
+        @include MQ ($tablet) {
+          width: 3px;
+        }
+      }
+      
+      .card__dot.active {
+        opacity: 1;
+      }
+      

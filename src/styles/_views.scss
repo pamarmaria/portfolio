@@ -1,0 +1,162 @@
+.view__content {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.view__content.about {
+  height: fit-content;
+  margin-top: 100px;
+}
+
+.view__content.portfolio {
+  height: 20vh;
+  margin-top: 100px;
+
+  @include MQ ($desktop) {
+    height: 100vh;
+    margin-top: 0;
+  }
+}
+
+  .home, .portfolio {
+    align-items: center;
+  }
+
+  .about {
+    margin: 0 20px;
+    gap: 10px;
+
+    @include MQ ($tablet) {
+      margin: auto 80px;
+    }
+
+    @include MQ ($desktop) {
+      margin: auto 20%;
+    }
+
+  }
+
+  .scroll__container {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  
+    .scroll__container::-webkit-scrollbar {
+      display: none;
+    }
+
+  .scroll__item {
+    scroll-snap-align: start;
+  }
+
+  .scroll__icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex;
+    margin-bottom: 20px;
+    z-index: 1;
+  }
+
+    .home.scroll__icon {
+      cursor: pointer;
+    }
+
+    .mouse {
+      width: 60px;
+
+      @include MQ ($tablet) {
+        width: 70px;
+      }
+
+      @include MQ ($desktop) {
+        width: 70px;
+      }
+    }
+
+    .arrow-down {
+      width: 10px;
+      animation: arrowAnimation 1.5s infinite;
+    }
+    
+    @keyframes arrowAnimation {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(10px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+      
+  .home__title, .portfolio__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    @include MQ ($desktop) {
+      flex-direction: row;
+      gap: 30px;
+      flex: 1;
+    }
+  }
+
+
+  .about__title {
+    text-align: left;
+    position: relative;
+    width: max-content;
+    margin: 20px 0;
+  }
+
+  .about__title::before,
+  .about__title::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+  .about__title::before {
+    background: var(--color-white);
+    height: 50px;
+    animation: typewriter 1s steps(7) 1s forwards;
+
+    @include MQ ($tablet) {
+      height: 80px;
+    }
+
+    @include MQ ($desktop) {
+      height: 100px;
+    }
+  }
+
+  .about__title::after {
+    width: 0.05em;
+    background: var(--color-orange);
+    animation: typewriter 1s steps(7) 1s forwards, blink 750ms steps(7) infinite;
+}
+
+    @keyframes typewriter {
+      to {
+        left: 100%;
+      }
+    }
+
+    @keyframes blink {
+      to {
+        background: transparent;
+      }
+    }

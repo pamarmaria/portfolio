@@ -1,0 +1,78 @@
+@import 'mediaqueries';
+
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: var(--typo-main);
+    font-weight: 600;
+    color: var(--color-black);
+}
+
+h1, .h1 {
+    font-size: 4rem;
+    line-height: 1em;
+    font-weight: 800;
+    margin-bottom: 10px;
+    text-align: center;
+    color: var(--color-orange);
+
+    @include MQ ($tablet) {
+      font-size: 6rem;
+    }
+
+    @include MQ ($desktop) {
+      font-size: 8rem;
+    }
+  }
+
+h2, .h2 {
+    font-size: 2.4rem;
+    font-weight: 400;
+    text-align: center;
+    margin: auto 30px;
+
+    @include MQ ($tablet) {
+      font-size: 3rem;
+    }
+
+    @include MQ ($desktop) {
+      font-size: 4rem;
+      margin: 0;
+      margin-top: 20px;
+    }
+}
+
+p  {
+    font-family: var(--typo-main);
+    line-height: 1.5em;
+    font-weight: 300;
+    margin: 0 0 1em 0;
+    font-size: 1.4rem;
+
+    @include MQ ($tablet) {
+        font-size: 2rem;
+    }
+
+    @include MQ ($desktop) {
+        font-size: 2rem;
+    }
+}
+
+
+a  {
+    color: var(--color-greyscale3);
+    transition: 0.3s ease-in-out;
+    text-decoration: none;
+    font-size: 1.4rem;
+
+    @include MQ ($tablet) {
+        font-size: 2rem;
+    }
+
+    @include MQ ($desktop) {
+        font-size: 2rem;
+    }
+
+    &:hover {
+        color: var(--color-orange);
+    }
+}

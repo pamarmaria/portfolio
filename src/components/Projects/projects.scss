@@ -1,0 +1,85 @@
+@import '../../styles/mediaqueries';
+@import '../../styles/globalStyle.scss';
+
+.projects {
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Distribuye los proyectos en espacio disponible */
+
+    @include MQ ($tablet) {
+        margin: 0 auto 100px;
+    }
+
+    @include MQ ($desktop) {
+        flex-direction: row;
+    }
+}
+  
+  .project-item {
+    width: 100%; /* Tamaño para dos proyectos lado a lado con espacio entre ellos */
+
+    @include MQ ($desktop) {
+        width: calc(50% - 80px);
+        margin: 40px;
+    }
+  }
+
+  
+  .project-list {
+    margin-top: 10px;
+    margin-bottom: 50px;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    @include MQ ($desktop) {
+        margin-bottom: 0;
+    }
+  }
+  
+  .project-list li {
+    font-size: 1.3rem;
+    list-style: none;
+    white-space: nowrap; /* Evita que los elementos <li> se dividan en varias líneas */
+    margin-right: 30px;
+    margin-bottom: 10px; /* Agrega un espacio vertical entre elementos en la misma línea */
+    padding: 5px 10px; /* Agrega relleno para que los elementos se vean como botones */
+    border: 1px solid var(--color-orange); /* Agrega un borde alrededor de cada elemento */
+}
+  
+
+  .projects img {
+    width: 100%;
+    height: auto;
+    border: solid 1px black;
+}
+  
+/*
+
+.projects {
+    margin: 0 auto 70px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+
+    @include MQ ($tablet) {
+        margin: 0 auto 100px;
+    }
+
+    @include MQ ($desktop) {
+        margin: 100px auto 80px auto;
+        flex-direction: row;
+    }
+}
+
+    .projects a {
+        flex: 0 0 45%;
+    }
+  
+    
+*/

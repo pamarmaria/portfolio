@@ -1,0 +1,47 @@
+[
+    {
+        "title": "Be Woman 360",
+        "img": "../../img/captura-bewoman.jpg",
+        "mobile-img": "../../img/captura-mobile-bewoman.jpg",
+        "url": "https://bewoman360.com/reto-hipopresivos/",
+        "work": ["Web Design", "Front-End Development", "Creative Direction", "Content Creation", "Digital Marketing Management"],
+        "featured": true
+    },
+    {
+        "title": "Grupo Terra de Mar",
+        "img": "../../img/captura-terrademar.jpg",
+        "mobile-img": "../../img/captura-mobile-terrademar.jpg",
+        "url": "https://grupoterrademar.com",
+        "work": ["Web Design", "WordPress Visual Editor", "Branding", "SEO", "Google Profile Management", "Digital Marketing Management"],
+        "featured": true
+    },
+    {
+        "title": "Tintoreria Azul",
+        "img": "../../img/captura-tintoreriaazul.jpg",
+        "mobile-img": "../../img/captura-mobile-tintoreriaazul.jpg",
+        "url": "https://tintoreriaazul.es/",
+        "work": ["Web Design", "WordPress Visual Editor", "Content Creation", "Local SEO", "Google Profile Management", "Social Media Management"],
+        "featured": true
+    },
+    {
+        "title": "Club Tenis Buenavista Benissa",
+        "img": "../../img/captura-tenisbuenavista.jpg",
+        "mobile-img": "../../img/captura-mobile-tenisbuenavista.jpg",
+        "url": "https://tenisbuenavista.com/",
+        "work": ["Web Design", "WordPress Visual Editor", "Local SEO"]
+    },
+    {
+        "title": "Notaria de El Campello",
+        "img": "../../img/captura-notariacampello.jpg",
+        "mobile-img": "../../img/captura-mobile-notariacampello.jpg",
+        "url": "http://www.notariadecampello.com/",
+        "work": ["Web Design", "Front-End Development", "Branding"]
+    },
+    {
+        "title": "Milam Teles Mercería",
+        "img": "../../img/captura-milamteles.jpg",
+        "mobile-img": "../../img/captura-mobile-milamteles.jpg",
+        "url": "https://milamteles.com/",
+        "work": ["Web Design", "WordPress Visual Editor"]
+    }
+  ]
